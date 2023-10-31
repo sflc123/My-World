@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html html>
+    <head>
+        <meta lang="zh-CN">
+        <meta charset="utf=8">
+        <title>无序列表</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="container">
+            <ui class="clearfix">
+                <li><a href="#">列表一</a></li>
+                <li><a href="#">列表二</a></li>
+                <li><a href="#">列表三</a></li>
+                <li><a href="#">列表四</a></li>
+                <li><a href="#">列表五</a></li>
+                <li><a href="#">列表六</a></li>
+                <li><a href="#">列表七</a></li>
+                <li><a href="#">列表八</a></li>
+            </ui>
+        </div>
+    </body>
+    <style>
+        /*设置默认*/
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style:none;
+        }
+        a{
+            text-decoration:none;
+            color:#000;
+        }
+        /*消除浮动*/
+        .clearfix::before,.clearfix::after{
+            content:"";
+            display:table;
+        }
+        .clearfix::after{
+            clear:both;
+        }
+
+        .container{
+            width:80%;
+            height:80px;
+            /* border:1px solid #000; */
+            margin:10vh auto 0 auto;
+
+        }
+        .container li{
+            float:left;
+            height:80px;
+            line-height:80px;
+            /* border:1px solid #000; */
+            width:12.5%;
+            border-radius:10px;
+            background:#4fc3c7;
+            text-align:center;
+            box-shadow:2px 2px 2px #919191,
+            4px 4px 8px #919141;
+        }
+        li a{
+            display:inline-block;
+            font-family:"楷体";
+            font-size:25px;
+            font-weight:600;
+            color:aliceblue;
+            text-shadow:1px 1px 2px #ffd,
+            2px 2px 4px #ff1;        
+        }
+        li:hover{
+            background:#3939f9;
+        }
+        li:hover a{
+            color:#919191;
+        }
+    </style>
+</html>
